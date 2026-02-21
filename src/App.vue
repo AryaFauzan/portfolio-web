@@ -8,26 +8,26 @@ const isMobileMenuOpen = ref(false)
   <div
     class="min-h-screen text-gray-200 font-sans flex flex-col relative overflow-hidden pb-20 transition-colors duration-700"
   >
-    <div class="fixed inset-0 -z-10 bg-[#0a0a0a]">
+    <div class="fixed top-0 left-0 w-full h-[120vh] -z-10 bg-[#0a0a0a]">
       <div
-        class="absolute inset-0 bg-cover bg-[center_50%] bg-no-repeat transition-opacity duration-1000 ease-in-out"
+        class="fixed top-0 left-0 w-full h-[120vh] bg-cover bg-[center_50%] bg-no-repeat transition-opacity duration-1000 ease-in-out"
         :class="store.activeUser === 'arya' ? 'opacity-100' : 'opacity-0'"
         style="background-image: url('/img/forest-bg.jpeg')"
       ></div>
 
       <div
-        class="absolute inset-0 bg-cover bg-bottom bg-no-repeat transition-opacity duration-1000 ease-in-out"
+        class="fixed top-0 left-0 w-full h-[120vh] bg-cover bg-bottom bg-no-repeat transition-opacity duration-1000 ease-in-out"
         :class="store.activeUser === 'arya' ? 'opacity-0' : 'opacity-100'"
         style="background-image: url('/img/sea-bg.jpeg')"
       ></div>
 
       <div
-        class="absolute inset-0 backdrop-blur-md transition-colors duration-1000"
+        class="fixed top-0 left-0 w-full h-[120vh] backdrop-blur-md transition-colors duration-1000"
         :class="store.activeUser === 'arya' ? 'bg-[#1a2e2a]/50' : 'bg-[#0f172a]/50'"
       ></div>
 
       <div
-        class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full filter blur-3xl opacity-50 animate-pulse-slow transition-colors duration-1000"
+        class="fixed top-1/4 left-1/4 w-96 h-96 rounded-full filter blur-3xl opacity-50 animate-pulse-slow transition-colors duration-1000"
         :class="
           store.activeUser === 'arya'
             ? 'bg-gradient-to-r from-green-400/30 to-teal-500/30'
