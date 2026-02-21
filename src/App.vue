@@ -6,7 +6,7 @@ const isMobileMenuOpen = ref(false)
 
 <template>
   <div
-    class="min-h-screen text-gray-200 font-sans flex flex-col relative overflow-hidden pb-20 transition-colors duration-700"
+    class="min-h-screen text-gray-200 font-sans flex flex-col relative pb-32 transition-colors duration-700"
   >
     <div class="fixed top-0 left-0 w-full h-[120vh] -z-10 bg-[#0a0a0a]">
       <div
@@ -133,7 +133,7 @@ const isMobileMenuOpen = ref(false)
     </main>
 
     <div
-      class="fixed bottom-0 md:bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-black/40 backdrop-blur-xl border border-white/10 p-1 md:p-1.5 rounded-full flex gap-1 shadow-2xl transition-colors duration-500 w-auto max-w-[95vw]"
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-black/40 backdrop-blur-xl border border-white/10 p-1 md:p-1.5 rounded-full flex gap-1 shadow-2xl transition-colors duration-500 w-auto max-w-[95vw]"
       :class="
         store.activeUser === 'arya'
           ? 'shadow-[0_8px_32px_0_rgba(16,185,129,0.2)]'
