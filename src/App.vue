@@ -133,36 +133,40 @@ const isMobileMenuOpen = ref(false)
     </main>
 
     <div
-      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-black/40 backdrop-blur-xl border border-white/10 p-1 md:p-1.5 rounded-full flex gap-1 shadow-2xl transition-colors duration-500 w-auto max-w-[95vw]"
-      :class="
-        store.activeUser === 'arya'
-          ? 'shadow-[0_8px_32px_0_rgba(16,185,129,0.2)]'
-          : 'shadow-[0_8px_32px_0_rgba(59,130,246,0.2)]'
-      "
+      class="fixed bottom-8 md:bottom-10 left-0 w-full z-[100] flex justify-center pointer-events-none"
     >
-      <button
-        @click="store.activeUser = 'arya'"
+      <div
+        class="bg-[#0a0a0a]/50 backdrop-blur-xl border border-white/10 p-1 md:p-1.5 rounded-full flex gap-1 shadow-2xl transition-colors duration-500 w-auto max-w-[95vw] pointer-events-auto"
         :class="
           store.activeUser === 'arya'
-            ? 'bg-green-500/20 text-green-400 border-green-500/30 shadow-inner'
-            : 'text-gray-400 hover:text-white border-transparent'
+            ? 'shadow-[0_8px_32px_0_rgba(16,185,129,0.2)]'
+            : 'shadow-[0_8px_32px_0_rgba(59,130,246,0.2)]'
         "
-        class="whitespace-nowrap px-3 py-2 md:px-8 md:py-2.5 rounded-full text-[10px] sm:text-xs md:text-sm font-bold border transition-all duration-300"
       >
-        Arya Cahya F.
-      </button>
+        <button
+          @click="store.activeUser = 'arya'"
+          :class="
+            store.activeUser === 'arya'
+              ? 'bg-green-500/20 text-green-400 border-green-500/30 shadow-inner'
+              : 'text-gray-400 hover:text-white border-transparent'
+          "
+          class="whitespace-nowrap px-4 py-2 md:px-8 md:py-2.5 rounded-full text-[11px] sm:text-xs md:text-sm font-bold border transition-all duration-300"
+        >
+          Arya Cahya F.
+        </button>
 
-      <button
-        @click="store.activeUser = 'dwi'"
-        :class="
-          store.activeUser === 'dwi'
-            ? 'bg-blue-500/20 text-blue-400 border-blue-500/30 shadow-inner'
-            : 'text-gray-400 hover:text-white border-transparent'
-        "
-        class="whitespace-nowrap px-3 py-2 md:px-8 md:py-2.5 rounded-full text-[10px] sm:text-xs md:text-sm font-bold border transition-all duration-300"
-      >
-        Dwi Ayu S. W.
-      </button>
+        <button
+          @click="store.activeUser = 'dwi'"
+          :class="
+            store.activeUser === 'dwi'
+              ? 'bg-blue-500/20 text-blue-400 border-blue-500/30 shadow-inner'
+              : 'text-gray-400 hover:text-white border-transparent'
+          "
+          class="whitespace-nowrap px-4 py-2 md:px-8 md:py-2.5 rounded-full text-[11px] sm:text-xs md:text-sm font-bold border transition-all duration-300"
+        >
+          Dwi Ayu S. W.
+        </button>
+      </div>
     </div>
   </div>
 </template>
