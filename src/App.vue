@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { store } from './toggle.js'
+import { Analytics } from '@vercel/analytics/vue'
 const isMobileMenuOpen = ref(false)
 </script>
 
@@ -168,6 +169,8 @@ const isMobileMenuOpen = ref(false)
         </button>
       </div>
     </div>
+
+    <Analytics />
   </div>
 </template>
 
