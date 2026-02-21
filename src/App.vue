@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import { store } from './toggle.js'
+import { Analytics } from '@vercel/analytics/vue'
 const isMobileMenuOpen = ref(false)
 </script>
 
 <template>
+  <Analytics />
   <div
     class="min-h-screen text-gray-200 font-sans flex flex-col relative pb-32 transition-colors duration-700"
   >
