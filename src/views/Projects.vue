@@ -107,14 +107,20 @@ const dwi_projects = ref([
       v-if="store.activeUser === 'arya'"
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
     >
-      <div v-for="project in arya_projects" :key="project.id" class="project-card group">
-        <div class="relative h-48 sm:h-56 w-full rounded-t-2xl overflow-hidden">
+      <div 
+        v-for="project in arya_projects" 
+        :key="project.id" 
+        class="group relative flex flex-col h-full rounded-3xl overflow-hidden z-10
+               bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg 
+               transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl"
+      >
+        <div class="relative h-48 sm:h-56 w-full overflow-hidden border-b border-white/5">
           <div
-            :class="`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`"
+            :class="`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500`"
           ></div>
         </div>
 
-        <div class="p-6 md:p-8 flex flex-col flex-grow">
+        <div class="p-6 md:p-8 flex flex-col flex-grow relative z-10 bg-transparent">
           <h3
             class="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300"
           >
@@ -135,10 +141,6 @@ const dwi_projects = ref([
             </span>
           </div>
         </div>
-
-        <div
-          class="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-teal-500 rounded-3xl opacity-0 group-hover:opacity-20 blur transition duration-500 -z-10"
-        ></div>
       </div>
     </div>
 
@@ -146,16 +148,22 @@ const dwi_projects = ref([
       v-if="store.activeUser === 'dwi'"
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
     >
-      <div v-for="project in dwi_projects" :key="project.id" class="project-card group">
-        <div class="relative h-48 sm:h-56 w-full rounded-t-2xl overflow-hidden">
+      <div 
+        v-for="project in dwi_projects" 
+        :key="project.id" 
+        class="group relative flex flex-col h-full rounded-3xl overflow-hidden z-10
+               bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg 
+               transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl"
+      >
+        <div class="relative h-48 sm:h-56 w-full overflow-hidden border-b border-white/5">
           <div
-            :class="`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 group-hover:opacity-100 transition-opacity duration-500`"
+            :class="`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500`"
           ></div>
         </div>
 
-        <div class="p-6 md:p-8 flex flex-col flex-grow">
+        <div class="p-6 md:p-8 flex flex-col flex-grow relative z-10 bg-transparent">
           <h3
-            class="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300"
+            class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300"
           >
             {{ project.title }}
           </h3>
@@ -174,19 +182,7 @@ const dwi_projects = ref([
             </span>
           </div>
         </div>
-
-        <div
-          class="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-teal-500 rounded-3xl opacity-0 group-hover:opacity-20 blur transition duration-500 -z-10"
-        ></div>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped lang="postcss">
-@reference "tailwindcss";
-
-.project-card {
-  @apply relative flex flex-col h-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2 z-10;
-}
-</style>

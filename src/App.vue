@@ -23,7 +23,7 @@ const isMobileMenuOpen = ref(false)
 
       <div
         class="absolute inset-0 backdrop-blur-md transition-colors duration-1000"
-        :class="store.activeUser === 'arya' ? 'bg-[#1a2e2a]/10' : 'bg-[#0f172a]/10'"
+        :class="store.activeUser === 'arya' ? 'bg-[#1a2e2a]/50' : 'bg-[#0f172a]/50'"
       ></div>
 
       <div
