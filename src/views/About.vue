@@ -166,7 +166,7 @@ import { store } from '../toggle.js'
 @reference "tailwindcss";
 
 .glass-card {
-  @apply bg-white/5 backdrop-blur-xl;
+  @apply bg-[#0a0a0a]/50 backdrop-blur-xl border border-white/10;
 }
 
 .skill-badge {
