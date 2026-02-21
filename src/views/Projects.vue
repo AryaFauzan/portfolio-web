@@ -107,12 +107,10 @@ const dwi_projects = ref([
       v-if="store.activeUser === 'arya'"
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
     >
-      <div 
-        v-for="project in arya_projects" 
-        :key="project.id" 
-        class="group relative flex flex-col h-full rounded-3xl overflow-hidden z-10
-               bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg 
-               transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl"
+      <div
+        v-for="project in arya_projects"
+        :key="project.id"
+        class="group relative flex flex-col h-full rounded-3xl overflow-hidden z-10 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl"
       >
         <div class="relative h-48 sm:h-56 w-full overflow-hidden border-b border-white/5">
           <div
@@ -148,12 +146,10 @@ const dwi_projects = ref([
       v-if="store.activeUser === 'dwi'"
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
     >
-      <div 
-        v-for="project in dwi_projects" 
-        :key="project.id" 
-        class="group relative flex flex-col h-full rounded-3xl overflow-hidden z-10
-               bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg 
-               transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl"
+      <div
+        v-for="project in dwi_projects"
+        :key="project.id"
+        class="group relative flex flex-col h-full rounded-3xl overflow-hidden z-10 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl"
       >
         <div class="relative h-48 sm:h-56 w-full overflow-hidden border-b border-white/5">
           <div
